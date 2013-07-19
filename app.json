@@ -44,10 +44,12 @@
             "x-bootstrap": true
         },
         {
-            "path": "js/onecolor.js"
+            "path": "js/onecolor.js",
+            "x-bootstrap": true
         },
         {
-            "path": "js/colorjoe.min.js"
+            "path": "js/colorjoe.min.js",
+            "x-bootstrap": true
         },
         {
             "path": "app.js",

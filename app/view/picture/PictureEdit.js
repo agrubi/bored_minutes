@@ -115,7 +115,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 		return items;
 	}
 	,_adjustColor:function(button){
-		//button.up('panel').down('colorpicker').show();
+		button.up('panel').down('colorpicker').show();
 		if(this.colorPickerPanel==null){
 			this.colorPickerPanel=new Ext.Panel({
 				frame:true,
@@ -155,20 +155,24 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 		return items;
 	}
 	,_adjustThickness:function(button){
-		new Ext.Panel({
-			frame:true,
-			border:true,
-			top : 0,
-			height : 200,
-			defaults:{
-				ui:'action'
-			}
-			,items:this._generateThicknesses()
-		}).showBy(button);
+		if(this.thicknessPickerPanel==null){
+			this.thicknessPickerPanel=new Ext.Panel({
+				frame:true,
+				border:true,
+				top : 0,
+				height : 200,
+				defaults:{
+					ui:'action'
+				}
+				,items:this._generateThicknesses()
+			});
+		}
+		this.thicknessPickerPanel.showBy(button);
 	}
 	,_selectThickness:function(button){
 		console('Thickness: '+button.value);
-		this.colorPickerPanel.hide();
+		this.thicknessPickerPanel.hide();
+		this.thicknessPickerPanel.hide();
 	}
 
 
