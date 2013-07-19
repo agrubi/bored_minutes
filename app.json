@@ -44,6 +44,14 @@
             "x-bootstrap": true
         },
         {
+            "path": "js/onecolor.js",
+            "x-bootstrap": true
+        },
+        {
+            "path": "js/colorjoe.js",
+            "x-bootstrap": true
+        },
+        {
             "path": "app.js",
             "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
             "update": "delta"
@@ -69,6 +77,10 @@
     "css": [
         {
             "path": "resources/css/bb10.css",
+            "update": "delta"
+        },
+        {
+            "path": "resources/css/colorjoe.css",
             "update": "delta"
         }
     ],
@@ -121,6 +133,7 @@
      * List of package names to require for the cmd build process
      */
     "requires": [
+		'whiteboard.ux.ColorPicker'
     ],
 
     /**
