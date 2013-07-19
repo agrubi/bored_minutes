@@ -1,32 +1,34 @@
 Ext.define('BoredMinutes.view.annotation.Annotation', {
     extend: 'Ext.form.FormPanel',
+    xtype:'annotationpanel',
     requires: [
         'Ext.form.FormPanel',
         'Ext.field.TextArea',
-        'Ext.form.FieldSet'
+        'Ext.form.FieldSet',
+        'BoredMinutes.view.annotation.TextArea'
     ],
 
     config:{
 
         title: 'Notes',
         iconCls: 'compose',
+        layout:'vbox',
         items:[
             {
-              xtype:'toolbar',
-              title:'Meeting Notes',
-                style:'padding-top:15px',
-                verticalAlign:'center'
+                xtype:'toolbar',
+                docked:'top',
+                title:'Meeting Notes'
             },
-            {
-            xtype:'fieldset',
-                    items:[
+
                     {
-                        xtype:'textareafield',
-                        height: 400
+                    xtype:'textareafield',
+                     cls: 'custom',
+                     flex:1
+
+
                     }
                     ]
-            }
-            ]
+
 
 
 
