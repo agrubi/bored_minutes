@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0.0.0" id="bored_minutes">
+
+  <author href="https://github.com/agrubi/bored_minutes" rim:copyright="Copyright 1998-2013 Sencha Hackathlon">Bored Minutes</author>
+
+  <name>Bored Minutes</name>
+
+  <description>
+    Meeting Notes App
+  </description>
+
+  <icon src="resources/icons/AppIcon.png"/>
+  <rim:splash src="resources/images/SplashScreen.png" />
+
+  <access uri="*" subdomains="true" />
+
+  <content src="index.html" rim:allowInvokeParams="true"/>
+
+</widget>
