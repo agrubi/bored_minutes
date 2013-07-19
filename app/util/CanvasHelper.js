@@ -22,11 +22,11 @@ Ext.define("BoredMinutes.util.CanvasHelper", {
     },
 
     setDrawingCanvas: function(htmlCanvasElement) {
-        this.drawingCanvas = htmlCanvasElement;
+        this.drawingCanvas = $('#' + htmlCanvasElement.id);
     },
 
     setImageCanvas: function(htmlCanvasElement) {
-        this.imageCanvas = htmlCanvasElement;
+        this.imageCanvas = $('#' + htmlCanvasElement.id);
         this.canvasHeight = this.imageCanvas.height();
         this.canvasWidth = this.imageCanvas.width();
     },
