@@ -13,13 +13,16 @@ Ext.define('BoredMinutes.view.annotation.Annotation', {
         items:[
             {
               xtype:'toolbar',
-              title:'Annotation'
+              title:'Meeting Notes',
+                style:'padding-top:15px',
+                verticalAlign:'center'
             },
             {
             xtype:'fieldset',
                     items:[
                     {
-                    xtype:'textareafield'
+                        xtype:'textareafield',
+                        height: 400
                     }
                     ]
             }
