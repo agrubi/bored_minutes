@@ -1,4 +1,4 @@
-Ext.define('whiteboard.ux.ColorPicker',{
+Ext.define('board_minutes.ux.ColorPicker',{
 	extend:'Ext.Container'
 	,xtype:'colorpicker'
 	,config:{
