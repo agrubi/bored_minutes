@@ -12,6 +12,10 @@ Ext.define('BoredMinutes.view.annotation.Annotation', {
         iconCls: 'compose',
         items:[
             {
+              xtype:'toolbar',
+              title:'Annotation'
+            },
+            {
             xtype:'fieldset',
                     items:[
                     {
