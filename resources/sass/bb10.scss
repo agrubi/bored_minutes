@@ -1,2 +1,15 @@
 @import 'sencha-touch/bb10';
 @import 'sencha-touch/bb10/all';
+
+@include icon('user');
+
+@include icon-font('fontello-icons', inline-font-files(
+    'fontello.woff', woff,
+    'fontello.ttf', ttf,
+    'fontello.svg', svg
+));
+
+@include icon('brush', '\e801', 'fontello-icons');
+@include icon('eraser', '\e800', 'fontello-icons');
+@include icon('color', '\e803', 'fontello-icons');
+@include icon('camera', '\e802', 'fontello-icons');
