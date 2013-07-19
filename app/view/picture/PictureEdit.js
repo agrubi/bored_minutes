@@ -1,7 +1,8 @@
 Ext.define('BoredMinutes.view.picture.PictureEdit', {
     extend: 'Ext.Panel',
     requires:[
-        'BoredMinutes.view.picture.PictureCanvas'
+        'BoredMinutes.view.picture.PictureCanvas',
+        'Ext.SegmentedButton'
     ],
     config:{
         title: 'Whiteboard',
