@@ -1,26 +1,36 @@
 Ext.define('BoredMinutes.view.email.RecipientField', {
     extend: 'Ext.Panel',
     xtype:'recipientfield',
-    requires:['Ext.field.Text'],
+    requires:['Ext.field.Text', 'BoredMinutes.util.ContactsHelper'],
     config:{
-              layout:'hbox',
-              items:[
-                  {
-                      xtype:'textfield',
-                      flex:3
-                  },
-                  {
-                      xtype:'button',
-                      text:'remove',
+        layout:'hbox',
+        items:[
+            {
+                xtype:'textfield',
+                flex:3,
+                listeners: {
+                    focus: function() {
+                        var ContactsHelper = Ext.create('BoredMinutes.util.ContactsHelper', {  });
 
-                      action:'recipientRemove'
-                  }
-              ]
+                        ContactsHelper.getContacts();
+
+                    }
+                }
+
+            },
+            {
+                xtype:'button',
+                text:'remove',
+
+                action:'recipientRemove'
+            }
+        ]
+
+    },
+
+    _showContacts:function()
+    {
 
     }
-
-
-
-
 
 });
