@@ -68,7 +68,7 @@
      */
     "css": [
         {
-            "path": "resources/css/app.css",
+            "path": "resources/css/bb10.css",
             "update": "delta"
         }
     ],
