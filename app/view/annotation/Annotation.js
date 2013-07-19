@@ -8,8 +8,8 @@ Ext.define('BoredMinutes.view.annotation.Annotation', {
 
     config:{
 
-        title: 'Annot',
-        iconCls: 'home',
+        title: 'Notes',
+        iconCls: 'compose',
         items:[
             {
             xtype:'fieldset',

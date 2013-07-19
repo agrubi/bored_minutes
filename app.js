@@ -24,6 +24,7 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox'
+		,'whiteboard.ux.ColorPicker'
     ],
 
     views: [
