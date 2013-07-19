@@ -1,4 +1,4 @@
-Ext.define('board_minutes.ux.ColorPicker',{
+Ext.define('BoardMinutes.ux.ColorPicker',{
 	extend:'Ext.Container'
 	,xtype:'colorpicker'
 	,config:{
