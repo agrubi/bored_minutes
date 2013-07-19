@@ -49,18 +49,23 @@ Ext.define('BoredMinutes.ux.ColorPicker',{
 			,ui:'action'
 			,disabled:false
 		});
+		//The FIRST time, we want to initialize the actual color picker
+		this.colorPickerEl=null;
 		this.onAfter('painted',function(){
-			var renderEl=this.pickerBody.getInnerHtmlElement().createChild().getId();
-			var initialColor=this.getInitialColor();
-			if(colorjoe && renderEl!==''){
-				var picker=colorjoe.rgb(renderEl, initialColor, []);
-				this.setPicker(picker);
-				picker.on('done',function(color){me.onColorChange(color)});
-				picker.on('change',function(color){me.onColorChange(color)});
-			}else{
-				console.log('You do not have the colorjoe library loaded!');
+			if(this.colorPickerEl===null){
+				var renderEl=this.pickerBody.getInnerHtmlElement().createChild().getId();
+				this.colorPickerEl=renderEl;
+				var initialColor=this.getInitialColor();
+				if(colorjoe && renderEl!==''){
+					var picker=colorjoe.rgb(renderEl, initialColor, []);
+					this.setPicker(picker);
+					picker.on('done',function(color){me.onColorChange(color)});
+					picker.on('change',function(color){me.onColorChange(color)});
+				}else{
+					console.log('You do not have the colorjoe library loaded!');
+				}
 			}
-		});
+		},this,{single:true});
 		this.callParent();
 	}
 });
