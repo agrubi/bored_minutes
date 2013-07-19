@@ -26,14 +26,14 @@ Ext.define('BoredMinutes.view.email.EmailWrite', {
             {
                 xtype:'toolbar',
                 docked:'top',
-                title:'Add recipients',
+
                 items:[
                     {
                      xtype:"spacer"
                     },
                     {
                     xtype:'button',
-                    text:'add',
+                        iconCls:'add',
                     action:'recipientAdd'
                     }
 
