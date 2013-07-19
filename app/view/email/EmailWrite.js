@@ -26,6 +26,7 @@ Ext.define('BoredMinutes.view.email.EmailWrite', {
             {
                 xtype:'toolbar',
                 docked:'top',
+                title:'Add recipients',
                 items:[
                     {
                      xtype:"spacer"
@@ -42,9 +43,13 @@ Ext.define('BoredMinutes.view.email.EmailWrite', {
 
         control: {
             'button[action=recipientAdd]': {
-                                tap: '_recipientAdd',
-                                swipe:'_recipientRemove'
-                                }
+                                tap: '_recipientAdd'
+
+                                },
+            'recipientfield button[action=recipientRemove]': {
+                tap: '_recipientRemove'
+
+            }
 
         }
 
@@ -59,11 +64,10 @@ Ext.define('BoredMinutes.view.email.EmailWrite', {
         this.child('fieldset').add({xtype:'recipientfield'});
     },
 
-    _recipientRemove:function()
-    {
-        //var field=Ext.create('recipientfield');
-
-        this.child('fieldset').add({xtype:'recipientfield'});
+    _recipientRemove:function(button){
+       button.getParent().destroy();
     }
+
+
 
 });
