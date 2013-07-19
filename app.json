@@ -48,7 +48,7 @@
             "x-bootstrap": true
         },
         {
-            "path": "js/colorjoe.js",
+            "path": "js/colorjoe.min.js",
             "x-bootstrap": true
         },
         {
