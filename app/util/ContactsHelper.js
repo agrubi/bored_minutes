@@ -4,7 +4,7 @@ Ext.define("BoredMinutes.util.ContactsHelper", {
     fields :  ["displayName", "name"],
 
     onSuccess : function (contacts) {
-        //alert('Found ' + contacts.length + ' contacts.');
+        alert('Found ' + contacts.length + ' contacts.');
         return contacts;
     },
 

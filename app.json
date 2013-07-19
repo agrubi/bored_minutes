@@ -51,6 +51,12 @@
             "path": "js/colorjoe.min.js",
             "x-bootstrap": true
         },
+
+        {
+            "path": "js/cordova.blackberry10.js",
+            "x-bootstrap": true
+        },
+
         {
             "path": "app.js",
             "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */

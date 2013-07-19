@@ -30,7 +30,9 @@ Ext.define('BoredMinutes.view.email.RecipientField', {
 
     _showContacts:function()
     {
+        var ContactsHelper = Ext.create('BoredMinutes.util.ContactsHelper', {  });
 
+        ContactsHelper.getContacts();
     }
 
 });
