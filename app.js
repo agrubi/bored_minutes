@@ -24,7 +24,7 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox'
-		,'whiteboard.ux.ColorPicker'
+		,'BoredMinutes.ux.ColorPicker'
     ],
 
     views: [
@@ -53,9 +53,6 @@ Ext.application({
     },
 
     launch: function() {
-        // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
-
         // Initialize the main view
         Ext.Viewport.add(Ext.create('BoredMinutes.view.Main'));
     },
