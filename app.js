@@ -27,8 +27,9 @@ Ext.application({
     ],
 
     views: [
-        'Main',
-        'BoredMinutes.view.picture.PictureEdit'
+        'Main'
+        //,
+      //  'BoredMinutes.view.picture.PictureEdit',
 
     ],
 
