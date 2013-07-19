@@ -45,7 +45,8 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
                             itemId: 'adjustThickness',
                             xtype: 'button',
                             iconCls: 'thickness',
-                            ui: 'plain'                            
+                            ui: 'plain'     
+                            ,action:'adjustThickness'                       
                         },
                         {
                           xtype:'spacer'
@@ -77,6 +78,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
             'button[action=setBrush]': { tap: '_setBrush'},
             'button[action=setEraser]': { tap: '_setEraser'}
             ,'button[action=adjustColor]': { tap: '_adjustColor'}
+			,'button[action=adjustThickness]': { tap: '_adjustThickness'}
 
         }
 
@@ -88,10 +90,85 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
     _setEraser:function(){
         //alert('set eraser');
     }
-	,_adjustColor:function(button){
-		button.up('panel').down('colorpicker').show();
+	,_generateColors:function(){
+		var colors=['black','white','red','blue','green','yellow','orange'],
+			len=colors.length,
+			items=[],
+			me=this;
+		for(var i=0;i<len;i++){
+			items.push({
+				xtype:'button'
+				,iconCls:'color'
+				,style:{
+					'background':colors[i]
+				}
+				,value:colors[i]
+				,width:50
+				,action:'selectColor'
+				,listeners:{
+					'tap':me._selectColor
+					,scope:me
+				}
+			});
+		}
+		return items;
 	}
-
+	,_adjustColor:function(button){
+		//button.up('panel').down('colorpicker').show();
+		if(this.colorPickerPanel==null){
+			this.colorPickerPanel=new Ext.Panel({
+				frame:true,
+				border:true,
+				top : 0,
+				height : 200,
+				defaults:{
+					ui:'action'
+				}
+				,items:this._generateColors()
+			})
+		}
+		this.colorPickerPanel.showBy(button);
+	}
+	,_selectColor:function(button){
+		console('Color: '+button.value);
+		this.colorPickerPanel.hide();
+	}
+	,_generateThicknesses:function(){
+		var thicknesses=[1,2,3,4],
+			len=thicknesses.length,
+			items=[],
+			me=this;
+		for(var i=0;i<len;i++){
+			items.push({
+				xtype:'button'
+				,iconCls:'color'
+				,value:thicknesses[i]
+				,width:50
+				,action:'selectThickness'
+				,listeners:{
+					'tap':me._selectThickness
+					,scope:me
+				}
+			});
+		}
+		return items;
+	}
+	,_adjustThickness:function(button){
+		new Ext.Panel({
+			frame:true,
+			border:true,
+			top : 0,
+			height : 200,
+			defaults:{
+				ui:'action'
+			}
+			,items:this._generateThicknesses()
+		}).showBy(button);
+	}
+	,_selectThickness:function(button){
+		console('Thickness: '+button.value);
+		this.colorPickerPanel.hide();
+	}
 
 
 });
