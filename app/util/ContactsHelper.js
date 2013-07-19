@@ -9,7 +9,7 @@ Ext.define("BoredMinutes.util.ContactsHelper", {
     },
 
     onError : function(contactError) {
-        alert('onError!');
+        alert('Error ! Cannot access the contact list.');
     },
 
     setFilter : function(searchName) {
@@ -19,7 +19,7 @@ Ext.define("BoredMinutes.util.ContactsHelper", {
     getContacts : function () {
 
         //SET OPTIONS
-        var options;
+        var options = new ContactFindOptions();
         options.filter = this.filter;
         options.multiple = this.multiple;
 

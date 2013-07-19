@@ -63,8 +63,11 @@ Ext.define('BoredMinutes.view.picture.PictureCanvas', {
     recomputeSize:function(){
         var height=this.element.getHeight();
         var width=this.element.getWidth();
-        this.annotation.setHeight(height);
-        this.annotation.setWidth(width);
+        this.down('#annotation').setHeight(height);
+        this.down('#annotation').setWidth(width);
+		this.down('#whiteboard').setHeight(height);
+		this.down('#whiteboard').setWidth(width);
+
 
     }
 	,doDraw:function(event) {

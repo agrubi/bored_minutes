@@ -22,11 +22,11 @@ Ext.define("BoredMinutes.util.CanvasHelper", {
     },
 
     setDrawingCanvas: function(htmlCanvasElement) {
-        this.drawingCanvas = htmlCanvasElement;
+        this.drawingCanvas = $('#' + htmlCanvasElement.id);
     },
 
     setImageCanvas: function(htmlCanvasElement) {
-        this.imageCanvas = htmlCanvasElement;
+        this.imageCanvas = $('#' + htmlCanvasElement.id);
         this.canvasHeight = this.imageCanvas.height();
         this.canvasWidth = this.imageCanvas.width();
     },
@@ -45,7 +45,7 @@ Ext.define("BoredMinutes.util.CanvasHelper", {
     },
 
     draw: function (point) {
-        var currentColor = (erasingWhiteboard ? "white" : this.drawingColor);
+        var currentColor = (this.erasingWhiteboard ? "white" : this.drawingColor);
         var fillSize = Math.ceil(this.brushSize / 2);
 
         this.points.unshift(point);
