@@ -4,7 +4,8 @@ Ext.define("BoredMinutes.util.ContactsHelper", {
     fields :  ["displayName", "name"],
 
     onSuccess : function (contacts) {
-        alert('Found ' + contacts.length + ' contacts.');
+        //alert('Found ' + contacts.length + ' contacts.');
+        return contacts;
     },
 
     onError : function(contactError) {
@@ -22,8 +23,7 @@ Ext.define("BoredMinutes.util.ContactsHelper", {
         options.filter = this.filter;
         options.multiple = this.multiple;
 
-        var contacts = navigator.contacts.find(this.fields, this.onSuccess, this.onError, options);
-        return contacts;
+        navigator.contacts.find(this.fields, this.onSuccess, this.onError, options);
     }
 
 });
