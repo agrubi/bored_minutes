@@ -14,3 +14,16 @@
 @include icon('eraser', '\f12d', 'icomoon-icons');
 @include icon('color', '\e001', 'icomoon-icons');
 @include icon('camera', '\f030', 'icomoon-icons');
+
+
+.x-field-textarea.custom{
+  .x-component-outer,
+  .x-field-input {
+    @include display-box;
+  }
+
+  x-input-el,
+  .x-field-input {
+    @include box-flex(1);
+  }
+}
