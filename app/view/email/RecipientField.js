@@ -11,7 +11,8 @@ Ext.define('BoredMinutes.view.email.RecipientField', {
                   },
                   {
                       xtype:'button',
-                      text:'remove',
+
+                      iconCls:'delete',
 
                       action:'recipientRemove'
                   }
