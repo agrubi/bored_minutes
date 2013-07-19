@@ -61,7 +61,13 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
                  {
                     xtype:'picturecanvas',
                     flex:1
-                 }
+                 },
+				 {
+					xtype:'colorpicker'
+					,height:290
+					,hidden:true
+					,itemId:'colorpicker'
+				}
 
 
 
@@ -70,6 +76,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
         control: {
             'button[action=setBrush]': { tap: '_setBrush'},
             'button[action=setEraser]': { tap: '_setEraser'}
+            ,'button[action=adjustColor]': { tap: '_adjustColor'}
 
         }
 
@@ -81,6 +88,9 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
     _setEraser:function(){
         //alert('set eraser');
     }
+	,_adjustColor:function(button){
+		button.up('panel').down('colorpicker').show();
+	}
 
 
 
