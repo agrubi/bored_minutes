@@ -10,17 +10,22 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
                     items:[
 
                         {
+                            itemId: 'brushWidth',
                             xtype:'button',
-                            text:'1'
+                            iconCls: 'brush',
+                            ui: 'plain'
                         },
                         {
+                            itemId: 'adjustColor',
                             xtype:'button',
-                            text:'2'
+                            iconCls: 'color',
+                            ui: 'plain'
                         },
                         {
                             itemId: 'eraser',
                             xtype:'button',
-                            text:'3'
+                            iconCls: 'eraser',
+                            ui: 'plain'
                         },
                         {
                           xtype:'spacer'
