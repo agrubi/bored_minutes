@@ -6,7 +6,6 @@ Ext.define('BoredMinutes.view.email.RecipientField', {
 
 
 
-
     }
 
 
