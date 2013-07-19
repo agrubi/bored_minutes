@@ -1,0 +1,17 @@
+/*
+This file is part of Sencha Touch 2.3
+
+Copyright (c) 2011-2013 Sencha Inc
+
+Contact:  http://www.sencha.com/contact
+
+Pre-release code in the Sencha repository is intended for development purposes only and will
+not always be stable.
+
+Use of pre-release code is permitted with your application at your own risk under standard
+Sencha license terms. Public redistribution is prohibited.
+
+For early licensing, please contact us at licensing@sencha.com
+
+Build date: 2013-07-16 06:06:48 (26e891e541eb3915bd2e8e1b0e311d993a84a7d3)
+*/
