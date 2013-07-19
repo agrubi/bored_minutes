@@ -6,7 +6,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
     config:{
         title: 'bonjour',
         iconCls: 'home',
-        fullscreen:true,
+
         layout:{
             type:'vbox',
             align:'stretch'
