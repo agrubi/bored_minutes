@@ -45,7 +45,7 @@ Ext.define("BoredMinutes.util.CanvasHelper", {
     },
 
     draw: function (point) {
-        var currentColor = (erasingWhiteboard ? "white" : this.drawingColor);
+        var currentColor = (this.erasingWhiteboard ? "white" : this.drawingColor);
         var fillSize = Math.ceil(this.brushSize / 2);
 
         this.points.unshift(point);
