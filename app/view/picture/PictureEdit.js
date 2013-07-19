@@ -100,8 +100,9 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 			items.push({
 				xtype:'button'
 				,iconCls:'color'
+				,ui:'normal'
 				,style:{
-					'background':colors[i]
+					background:colors[i]
 				}
 				,value:colors[i]
 				,width:50
@@ -115,7 +116,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 		return items;
 	}
 	,_adjustColor:function(button){
-		button.up('panel').down('colorpicker').show();
+		//button.up('panel').down('colorpicker').show();
 		if(this.colorPickerPanel==null){
 			this.colorPickerPanel=new Ext.Panel({
 				frame:true,
@@ -131,18 +132,19 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 		this.colorPickerPanel.showBy(button);
 	}
 	,_selectColor:function(button){
-		console('Color: '+button.value);
+		console.log('Color: '+button.value);
 		this.colorPickerPanel.hide();
 	}
 	,_generateThicknesses:function(){
-		var thicknesses=[1,2,3,4],
+		var thicknesses=[1,2,4,6],
 			len=thicknesses.length,
 			items=[],
 			me=this;
 		for(var i=0;i<len;i++){
 			items.push({
 				xtype:'button'
-				,iconCls:'color'
+				//,iconCls:'color'
+				,text:'<div style="height:'+thicknesses[i]+'px;width:100%;background-color:black;">'
 				,value:thicknesses[i]
 				,width:50
 				,action:'selectThickness'
@@ -170,7 +172,7 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
 		this.thicknessPickerPanel.showBy(button);
 	}
 	,_selectThickness:function(button){
-		console('Thickness: '+button.value);
+		console.log('Thickness: '+button.value);
 		this.thicknessPickerPanel.hide();
 		this.thicknessPickerPanel.hide();
 	}
