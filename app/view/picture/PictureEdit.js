@@ -4,8 +4,8 @@ Ext.define('BoredMinutes.view.picture.PictureEdit', {
         'BoredMinutes.view.picture.PictureCanvas'
     ],
     config:{
-        title: 'bonjour',
-        iconCls: 'home',
+        title: 'Whiteboard',
+        iconCls: 'camera',
 
         layout:{
             type:'vbox',

@@ -11,8 +11,8 @@ Ext.define('BoredMinutes.view.email.EmailWrite', {
 
     config:{
 
-        title: 'tt',
-        iconCls: 'home',
+        title: 'Attendees',
+        iconCls: 'team',
         items:[
 
             {
