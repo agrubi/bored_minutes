@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2012 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="brush" unicode="&#xe801;" d="M464 202q0-124-87-211t-210-87q-81 0-149 40 68 39 109 108t41 151q0 61 44 105t105 44 105-44 44-105z m415 563q33-33 33-79t-33-80l-318-318q-20 55-62 97t-97 62l318 318q32 32 79 32t80-33z" horiz-adv-x="928" />
+<glyph glyph-name="color-adjust" unicode="&#xe803;" d="M0 350q0 95 37 182t100 150 150 100 182 37 182-37 150-100 100-150 37-182-37-182-100-150-150-100-182-37-182 37-150 100-100 150-37 182z m397-225q0-46 32-79t79-32q3 0 11-1 81 12 148 60t105 121 39 158q0 90-43 167t-118 124-164 51q61-96 61-209 0-81-31-153t-86-128q-32-33-32-77z" horiz-adv-x="937.5" />
+<glyph glyph-name="eraser" unicode="&#xe800;" d="M500 64l187 214-429 0-187-214 429 0z m565 601q8-19 5-40t-17-37l-500-571q-21-25-54-25l-429 0q-21 0-39 11t-27 30q-8 19-5 40t17 37l500 571q21 25 54 25l429 0q21 0 39-11t27-30z" horiz-adv-x="1071.429" />
+<glyph glyph-name="camera" unicode="&#xe802;" d="M536 475q66 0 114-47t47-114-47-114-114-47-114 47-47 114 47 114 114 47z m393 232q59 0 101-42t42-101l0-500q0-59-42-101t-101-42l-786 0q-59 0-101 42t-42 101l0 500q0 59 42 101t101 42l125 0 28 76q11 27 39 47t58 20l286 0q30 0 58-20t39-47l28-76 125 0z m-393-643q103 0 177 73t73 177-73 177-177 73-177-73-73-177 73-177 177-73z" horiz-adv-x="1071.429" />
+</font>
+</defs>
+</svg>
